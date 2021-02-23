@@ -60,7 +60,7 @@ public class HeapSort {
 		printArray(arr);
 		long endTime   = System.nanoTime();
         double totalTime = endTime - startTime;
-        System.out.println("");
+        System.out.println("Length of array is "+ leng);
         System.out.println("Time required to sort array by Heap Sort of length "+ leng + " is " + totalTime/1000000+ " mili seconds ");
 	}
 }
