@@ -40,7 +40,8 @@ class QuickSort{
     }
 
     void SortedArray(int arr[])
-    {
+    {  
+        System.out.println("Sorted Array : ");
         System.out.print("[");
                 for(int i:arr)
                 {

@@ -31,10 +31,8 @@ for i in range(0,n):
 start_time = time.time()
 
 heapSort(arr)
-print("Sorted array is")
-for i in range(n):
-	print("%d" % arr[i]),
-
+print("Sorted array is : ")
+print(arr)
 print("length of an Array is :")
 print(n)
 print("Time Required to sort an array by Heap sort is %s milli seconds "  % ((time.time() - start_time)*1000))

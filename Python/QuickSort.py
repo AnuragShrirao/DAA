@@ -18,7 +18,7 @@ def quickSort(arr,low,high):
 
 arr = []
 n = int(input("Enter length of array"))
-print("Enter element of UnsortedArray")
+print("Enter element of Unsorted Array")
 for i in range(0,n):
     ele = int(input())
     arr.append(ele)
@@ -29,8 +29,7 @@ for i in range(0,n):
 start_time = time.time()
 quickSort(arr,0,n-1) 
 print ("Sorted array is:") 
-for i in range(n): 
-    print("%d" %arr[i]), 
+print(arr)
 print("length of an Array is :")
 print(n)
 print("Time Required to sort an array by Quick sort is %s milli seconds "  % ((time.time() - start_time)*1000))
