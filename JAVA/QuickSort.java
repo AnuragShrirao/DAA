@@ -41,13 +41,11 @@ class QuickSort{
 
     void SortedArray(int arr[])
     {  
-        System.out.println("Sorted Array : ");
+        int n = arr.length;
         System.out.print("[");
-                for(int i:arr)
-                {
-                    System.out.print(i+",");
-                }
-        System.out.print("]");
+		for (int i = 0; i < n; ++i)
+			System.out.print(arr[i] + " ");
+        System.out.println("]");
     }
     
     public static void main(String []args)
@@ -67,10 +65,10 @@ class QuickSort{
         long startTime = System.nanoTime();
         QuickSort qsmp = new QuickSort();
         qsmp.QuickSortRecursion(arr,0,leng-1);
+        System.out.println("Sorted Array : ");
         qsmp.SortedArray(arr);
         long endTime   = System.nanoTime();
         double totalTime = endTime - startTime;
-        System.out.println("");
         System.out.println("Time required to sort array by Quick Sort of length "+ leng + " is " + totalTime/1000000+ " mili seconds ");
     } 
 
