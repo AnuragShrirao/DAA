@@ -1,4 +1,7 @@
-class Knapsack { 
+import java.util.Scanner;
+import java.util.*;
+
+class Knapsack {
 	static int max(int a, int b) 
 { return (a > b) ? a : b; } 
 	static int knapSack(int W, int wt[], int val[], int n) 
@@ -21,10 +24,30 @@ class Knapsack {
 
 	public static void main(String args[]) 
 	{ 
-		int val[] = new int[] { 60, 70, 100 }; 
-		int wt[] = new int[] { 10, 20, 30 }; 
-		int W = 50; 
-		int n = val.length; 
-		System.out.println(knapSack(W, wt, val, n)); 
+		Scanner src = new Scanner(System.in);
+        System.out.println("Enter The length of values");
+        int leng = src.nextInt();
+        int val[] = new int[leng]; 
+		int wt[] = new int[leng]; 
+
+        System.out.println("Enter values");
+        for ( int i=0;i<leng;i++ )
+        {
+            val[i] = src.nextInt();
+        }
+		
+        System.out.println("Enter wt for corresponding values");
+        for ( int i=0;i<leng;i++ )
+        {
+            wt[i] = src.nextInt();
+        }
+		System.out.println("Enter capacity of knapsack ");
+		int W = src.nextInt();
+		src.close();
+		long startTime = System.nanoTime();
+		System.out.println("The knapsack is :"+knapSack(W, wt, val, leng)); 
+		long endTime   = System.nanoTime();
+        double totalTime = endTime - startTime;
+        System.out.println("Time required to sort array by Quick Sort of length  is " + totalTime/1000000+ " mili seconds ");
 	} 
 } 

@@ -1,3 +1,4 @@
+import time
 def knapSack(W, wt, val, n): 
 	K = [[0 for x in range(W + 1)] for x in range(n + 1)] 
 	for i in range(n + 1): 
@@ -11,8 +12,20 @@ def knapSack(W, wt, val, n):
 
 	return K[n][W] 
 
-val = [60, 70, 100] 
-wt = [10, 20, 30] 
-W = 50
-n = len(val) 
+val = []
+wt =[]
+n = int(input("Enter length of values"))
+print("Enter values")
+for i in range(0,n):
+    ele = int(input())
+    val.append(ele)
+print("Enter wt for corresponding values")
+for i in range(0,n):
+    ele = int(input())
+    wt.append(ele)
+print("Enter capacity of knapsack")
+W = int(input())
+print("The knapsack is : ") 
+start_time = time.time()
 print(knapSack(W, wt, val, n)) 
+print("Time Required to sort an array by Heap sort is %s milli seconds "  % ((time.time() - start_time)*1000))
