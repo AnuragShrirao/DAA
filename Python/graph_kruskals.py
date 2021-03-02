@@ -53,9 +53,7 @@ class Graph:
         for u, v, w in result:
             print("%d -- %d == %d"%(u,v,w))
             minCost += w
-
         print("Minimum cost =",minCost)
-
 n = int(input("Enter number of vertices of the graph "))
 g = Graph(n)
 x = int(input("Enter number of edges in the graph "))
@@ -65,7 +63,6 @@ for i in range(x):
     for j in range(3):
         arr[j] = int(input())
     g.addEdge(arr[0], arr[1], arr[2])
-
 start = time.time()
 g.KruskalMST()
 end = time.time()

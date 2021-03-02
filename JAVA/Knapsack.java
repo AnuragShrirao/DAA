@@ -16,10 +16,8 @@ class Knapsack {
 					K[i][w] = K[i - 1][w]; 
 			} 
 		} 
-
 		return K[n][W]; 
 	} 
-
 	public static void main(String args[]) 
 	{ 
 		Scanner src = new Scanner(System.in);
@@ -27,13 +25,11 @@ class Knapsack {
         int leng = src.nextInt();
         int val[] = new int[leng]; 
 		int wt[] = new int[leng]; 
-
         System.out.println("Enter values");
         for ( int i=0;i<leng;i++ )
         {
             val[i] = src.nextInt();
         }
-		
         System.out.println("Enter wt for corresponding values");
         for ( int i=0;i<leng;i++ )
         {

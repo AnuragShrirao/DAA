@@ -1,7 +1,6 @@
 
 import java.util.*; 
 class MST { 
-	
 	private static final int V = 5; 
 	int minKey(int key[], Boolean mstSet[]) 
 	{ 
@@ -23,7 +22,6 @@ class MST {
 			}
 		System.out.println("Minimum cost of spanning tree by Prim's algorithm is "+ minCost);
 	} 
-
 	void primMST(int graph[][]) 
 	{ 		 
 		int parent[] = new int[V]; 	 

@@ -1,5 +1,4 @@
 import java.util.*;
-
 public class HeapSort {
 	public void sort(int arr[])
 	{
@@ -36,7 +35,6 @@ public class HeapSort {
 			System.out.print(arr[i] + " ");
 		System.out.println();
 	}
-
 	public static void main(String args[])
 	{
 		Scanner src = new Scanner(System.in);
@@ -49,10 +47,8 @@ public class HeapSort {
             arr[i] = src.nextInt();
         }
         src.close();
-
         // int arr[] ={4,3,2,6,8,3,56,34,67,73,2345,85,2,4,77,77,334,234,86,321,6575,434,3424,47,324,34,5667,424,4,4,34234,324,345,45,555,475,58,77,86,86,89,4524,332,456,9,85,452,435,214,13,11,245,345,46,67,56,88,99,56,345,4,2,234,3,333,535,66,788,463,123,1334,3,43445,45,666,76,7678,5657,723,7878,783,7823,776,65,22,33,44,5,55,6,77,888,996,54,3,33,3,56,6,77};
         // int leng = arr.length;
-		
         long startTime = System.nanoTime();
 		HeapSort ob = new HeapSort();
 		ob.sort(arr);

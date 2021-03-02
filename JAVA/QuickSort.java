@@ -4,13 +4,11 @@ class QuickSort{
         int pivot = arr[(lowest+highest)/2];
         while(lowest<=highest)
         {
-    
          while(arr[lowest]<pivot)
         {
             lowest++;
         }
         while(arr[highest]>pivot)
-        
         {
             highest--;
         }
@@ -25,7 +23,6 @@ class QuickSort{
         }
         return lowest; //final position of pivot
     }
-
     void QuickSortRecursion(int arr[],int low,int high)
     {
         int pi = partition(arr, low, high);
@@ -38,7 +35,6 @@ class QuickSort{
             QuickSortRecursion(arr, pi, high);
         }
     }
-
     void SortedArray(int arr[])
     {  
         int n = arr.length;
@@ -47,7 +43,6 @@ class QuickSort{
 			System.out.print(arr[i] + " ");
         System.out.println("]");
     }
-    
     public static void main(String []args)
     {
         Scanner src = new Scanner(System.in);

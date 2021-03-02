@@ -1,6 +1,5 @@
 
 import java.util.*;
-
 class Graph {
 	class Edge implements Comparable<Edge> 
 	{
@@ -113,6 +112,7 @@ class Graph {
 			graph.edge[i].dest = sc.nextInt();
 			graph.edge[i].weight = sc.nextInt(); 
 		}
+
 		long start = System.nanoTime();
 		graph.KruskalMST();
 		long end = System.nanoTime(); 
