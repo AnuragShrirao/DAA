@@ -101,9 +101,9 @@ class Graph {
 	public static void main(String[] args)
 	{
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter number of Vertices\n");
+		System.out.println("Enter number of Vertices");
 		int V = sc.nextInt() ; 
-		System.out.println("Enter number of Edges\n");
+		System.out.println("Enter number of Edges");
 		int E = sc.nextInt();
 		Graph graph = new Graph(V, E);
 		int i = 0;
@@ -113,26 +113,10 @@ class Graph {
 			graph.edge[i].dest = sc.nextInt();
 			graph.edge[i].weight = sc.nextInt(); 
 		}
-		/*graph.edge[0].src = 0;
-		graph.edge[0].dest = 1;
-		graph.edge[0].weight = 10;
-
-		graph.edge[1].src = 0;
-		graph.edge[1].dest = 2;
-		graph.edge[1].weight = 6;
-
-		graph.edge[2].src = 0;
-		graph.edge[2].dest = 3;
-		graph.edge[2].weight = 5;
-
-		graph.edge[3].src = 1;
-		graph.edge[3].dest = 3;
-		graph.edge[3].weight = 15;
-
-		graph.edge[4].src = 2;
-		graph.edge[4].dest = 3;
-		graph.edge[4].weight = 4;*/
-
+		long start = System.nanoTime();
 		graph.KruskalMST();
+		long end = System.nanoTime(); 
+		double execution = end - start;
+    	System.out.println("\nExecution time: " + execution/1000000 + " milliseconds");
 	}
 }

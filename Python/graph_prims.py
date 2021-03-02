@@ -49,23 +49,17 @@ class Graph:
 
 n = int(input("Enter number of vertices of the graph "))
 g = Graph(n)
-# g = Graph(4)
 print("Enter the adjacency matrix of the Graph \n")
 for i in range(n):
     print("Enter", n ,"values in row",i+1)
     for j in range(n):
         g.graph[i][j]=int(input())
 
-##g.graph = [[0,10,6,5],
-##           [10,0,0,15],
-##           [6,0,0,4],
-##           [5,15,4,0]]
-
 start = time.time()
 g.primMST()
 end = time.time()
 print(end = "\n")
-print(f"Runtime of Prims's algorithm is {end-start}")
+print(f"Runtime of Prims's algorithm is {(end-start)*1000} milliseconds")
 
 
 

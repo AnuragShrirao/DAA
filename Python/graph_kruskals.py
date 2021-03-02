@@ -70,5 +70,5 @@ start = time.time()
 g.KruskalMST()
 end = time.time()
 print(end = "\n")
-print(f"Runtime of Kruskal's algorithm is {end-start}")
+print(f"Runtime of Kruskal's algorithm is {(end-start)*1000} milliseconds")
             

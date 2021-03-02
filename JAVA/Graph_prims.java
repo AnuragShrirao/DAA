@@ -3,23 +3,16 @@ import java.util.*;
 class MST { 
 	
 	private static final int V = 5; 
-
-
 	int minKey(int key[], Boolean mstSet[]) 
 	{ 
-		
 		int min = Integer.MAX_VALUE, min_index = -1; 
-
 		for (int v = 0; v < V; v++) 
 			if (mstSet[v] == false && key[v] < min) { 
 				min = key[v]; 
 				min_index = v; 
 			} 
-
 		return min_index; 
 	} 
-
-	
 	void printMST(int parent[], int graph[][]) 
 	{ 	int minCost = 0;
 		System.out.println("Edge \tWeight"); 
@@ -31,42 +24,26 @@ class MST {
 		System.out.println("Minimum cost of spanning tree by Prim's algorithm is "+ minCost);
 	} 
 
-	
 	void primMST(int graph[][]) 
-	{ 
-		 
-		int parent[] = new int[V]; 
-
-		 
+	{ 		 
+		int parent[] = new int[V]; 	 
 		int key[] = new int[V]; 
-
-		
 		Boolean mstSet[] = new Boolean[V]; 
-
-		
 		for (int i = 0; i < V; i++) { 
 			key[i] = Integer.MAX_VALUE; 
 			mstSet[i] = false; 
 		} 
-
-		
 		key[0] = 0; 
-		
 		parent[0] = -1;  
- 
 		for (int count = 0; count < V - 1; count++) { 
-			 
 			int u = minKey(key, mstSet); 
 			mstSet[u] = true; 
-
 			for (int v = 0; v < V; v++) 
-
 				if (graph[u][v] != 0 && mstSet[v] == false && graph[u][v] < key[v]) { 
 					parent[v] = u; 
 					key[v] = graph[u][v]; 
 				} 
 		} 
-
 		printMST(parent, graph); 
 	} 
 
@@ -75,19 +52,12 @@ class MST {
 		MST t = new MST(); 
 		int n;
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the number of Vertices of graph\n"); 
+		System.out.println("Enter the number of Vertices of graph"); 
 		n = sc.nextInt();
 		int graph[][] = new int[50][50];
-
-		/*int graph[][] = new int[][] { { 0, 2, 0, 6, 0 },
-						{ 2, 0, 3, 8, 5 }, 
-						{ 0, 3, 0, 0, 7 }, 
-						{ 6, 8, 0, 0, 9 }, 
-						{ 0, 5, 7, 9, 0 } };*/
-
 		int i = 0;
 		int j= 0;
-		System.out.println("Enter the Adjacency Matrix of order"+n+"x"+n+"\n");
+		System.out.println("Enter the Adjacency Matrix of order"+n+"x"+n+"");
 		for (i=0;i<n;i++) {
 			for (j = 0; j<n; j++){
 				graph[i][j] = sc.nextInt();
@@ -95,7 +65,7 @@ class MST {
 		long start = System.nanoTime();
 		t.primMST(graph);
 		long end = System.nanoTime(); 
-		long execution = end - start;
-    		System.out.println("\nExecution time: " + execution + " nanoseconds");
+		double execution = end - start;
+    	System.out.println("\nExecution time: " + execution/1000000 + " milliseconds");
 	} 
 } 
