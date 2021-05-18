@@ -4,8 +4,8 @@ In minimum spinning tree
 vertext = 4 
 edge =6
 
-For prims :
-adjecent matrix = 
+For Kruskal :
+source vertex , destination vertex, weight = 
 0 1 5
 0 2 4
 0 3 3
@@ -13,8 +13,8 @@ adjecent matrix =
 1 3 2
 2 3 3
 
-For kruskal:
-Grph 4*4:
+For Prims:
+Adjacency matrix Grph 4*4:
 
 0 5 4 3
 5 0 1 2
