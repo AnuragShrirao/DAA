@@ -40,4 +40,4 @@ s = timeit.default_timer()
 print("\nMinimum path distance is : ", travelling_salesman_problem(graph, source, V))
 e = timeit.default_timer()
 
-print("\nExecution Time :", (e - s))
+print("\nExecution time is {} seconds".format(e-s))

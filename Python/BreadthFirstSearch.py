@@ -45,4 +45,4 @@ s = timeit.default_timer()
 g.bfs(source_vertex)
 e = timeit.default_timer()
 
-print("\nExecution Time is ", (e-s))
+print("\nExecution time is {} seconds".format(e-s))

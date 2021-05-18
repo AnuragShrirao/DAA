@@ -52,4 +52,4 @@ s = timeit.default_timer()
 g.dijkstra(0);
 e = timeit.default_timer()
 
-print("\nExecution Time :: ", (e-s))
+print("\nExecution time is {} seconds".format(e-s))

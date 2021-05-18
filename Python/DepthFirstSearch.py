@@ -43,15 +43,4 @@ s = timeit.default_timer()
 g.dfs(source_vertex)
 e = timeit.default_timer()
 
-print("\nThe time taken by Heap sort to sort the given array is: ", (e-s))
-
-"""
-6
-2
-0 1
-0 2
-1 2 
-2 0 
-2 3 
-3 3
-"""
+print("\nExecution time is {} seconds".format(e-s))
