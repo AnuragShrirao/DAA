@@ -1,13 +1,12 @@
 import java.util.*;
-class QuickSort{
-    int partition(int arr[],int lowest,int highest){
-        int pivot = arr[(lowest+highest)/2];
-        while(lowest<=highest)
-        {
-         while(arr[lowest]<pivot)
-        {
-            lowest++;
-        }
+
+class QuickSort {
+    int partition(int arr[], int lowest, int highest) {
+        int pivot = arr[(lowest + highest) / 2];
+        while (lowest <= highest) {
+            while (arr[lowest] < pivot) {
+                lowest++;
+            }
         while(arr[highest]>pivot)
         {
             highest--;
@@ -15,11 +14,11 @@ class QuickSort{
         if(lowest<=highest)
         {
             int temp = arr[lowest];
-            arr[lowest]=arr[highest];
-            arr[highest]=temp;
-            lowest++;
-            highest--;
-        }
+                arr[lowest] = arr[highest];
+                arr[highest] = temp;
+                lowest++;
+                highest--;
+            }
         }
         return lowest; //final position of pivot
     }
